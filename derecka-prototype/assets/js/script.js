@@ -1,5 +1,6 @@
 // Placeholder for future interactivity (mobile menu, sliders, etc.).
 console.log('Prototype loaded');
+<<<<<<< HEAD
 // Scroll animation
 // Burger toggle
 const burger = document.getElementById('burger');
@@ -45,3 +46,5 @@ window.addEventListener('scroll', () => {
   header.style.boxShadow = y > 6 ? '0 6px 16px rgba(0,0,0,.08)' : '0 4px 12px rgba(0,0,0,.05)';
   lastY = y;
 });
+=======
+>>>>>>> 4fc394506832ed2356fa93a78e5e4c4a1aba2399
