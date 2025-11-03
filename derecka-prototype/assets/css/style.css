@@ -1,0 +1,149 @@
+/* 🎨 Палитра */
+:root{
+  --blue:#0ea5e9; --blue-dark:#0284c7;
+  --purple:#7c3aed; --purple-dark:#5b21b6;
+  --mint:#10b981; --mint-dark:#059669;
+  --dark-bg:#0b1220;
+  --text:#0f172a; --muted:#64748b;
+  --section-bg:#f8fafc; --card-bg:#fff;
+}
+
+/* ===== Глобально ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:'Poppins',sans-serif;color:var(--text);background:#fff;scroll-behavior:smooth}
+a{color:inherit;text-decoration:none;transition:.25s ease}
+img{max-width:100%;display:block}
+.container{width:min(1200px,92%);margin:0 auto}
+
+/* ===== Header + Burger ===== */
+.header{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(255,255,255,.88);
+  backdrop-filter:saturate(1.2) blur(10px);
+  border-bottom:1px solid #e5e7eb;
+  box-shadow:0 4px 12px rgba(0,0,0,.05);
+  animation:fadeDown .45s ease;
+}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:translateY(0)}}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-size:26px;font-weight:700;color:var(--blue);letter-spacing:.2px}
+.logo span{color:var(--purple)}
+
+.nav{display:flex;gap:24px;align-items:center}
+.nav a{padding:9px 14px;border-radius:10px}
+.nav a:hover{background:#f1f5f9;color:var(--purple)}
+
+/* Бургер */
+.burger{
+  display:none; width:42px;height:38px;padding:0;margin:0;border:0;background:transparent;
+  position:relative;cursor:pointer;
+}
+.burger span{
+  position:absolute;left:8px;right:8px;height:2.5px;background:#111;border-radius:3px;transition:.25s ease;
+}
+.burger span:nth-child(1){top:11px}
+.burger span:nth-child(2){top:18px}
+.burger span:nth-child(3){top:25px}
+.burger.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.is-open span:nth-child(2){opacity:0}
+.burger.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;min-height:640px;display:flex;align-items:center;justify-content:center;
+  text-align:center;color:#fff;padding:84px 20px;overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(rgba(15,23,42,.6),rgba(15,23,42,.6)),
+    url('../img/banner.jpg') center/cover no-repeat;
+  animation:heroZoom 8s ease-in-out infinite alternate;
+  transform-origin:center;
+}
+@keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.12)}}
+.hero-content{position:relative;z-index:2;animation:revealUp .9s ease-out}
+.hero h1{font-size:clamp(34px,5vw,60px);margin:0 0 12px;font-weight:700;letter-spacing:.3px}
+.hero p{font-size:18px;opacity:.92;margin:0 0 24px}
+.btn{
+  display:inline-block;padding:14px 32px;border-radius:12px;
+  background:linear-gradient(135deg,var(--purple),var(--blue));
+  color:#fff;font-weight:600;box-shadow:0 6px 18px rgba(124,58,237,.35);
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(14,165,233,.45)}
+
+/* стрелка вниз */
+.scroll-down{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);color:#fff;opacity:.85;font-size:26px;animation:float 1.6s infinite}
+@keyframes float{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-9px)}}
+
+/* ===== Секции ===== */
+.section{padding:78px 0}
+.section h2{text-align:center;font-size:32px;margin:0 0 10px}
+.muted{text-align:center;color:var(--muted);margin:0 0 40px}
+
+/* Welcome */
+.welcome{background:var(--section-bg)}
+.welcome-inner{display:flex;align-items:center;justify-content:space-between;gap:42px}
+.welcome-text p{color:var(--muted);line-height:1.75}
+.welcome-img{max-width:440px;border-radius:14px;box-shadow:0 10px 26px rgba(0,0,0,.1);transition:.35s ease}
+.welcome-img:hover{transform:scale(1.035)}
+
+/* Cards / Objectives */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{
+  background:var(--card-bg);border:1px solid #e2e8f0;border-radius:16px;padding:22px;
+  transition:.28s ease;will-change:transform,box-shadow;
+}
+.card:hover{transform:translateY(-6px);border-color:var(--mint);box-shadow:0 12px 28px rgba(16,185,129,.22)}
+.card b{display:block;margin:0 0 6px}
+
+/* Events Grid (красиво и компактно) */
+.events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:34px}
+.event-card{
+  background:#fff;border:1px solid #e2e8f0;border-radius:16px;overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,.07);transition:.28s ease;
+}
+.event-card:hover{transform:translateY(-6px);box-shadow:0 14px 28px rgba(0,0,0,.12)}
+.event-card img{width:100%;height:200px;object-fit:cover}
+.event-body{padding:14px 16px}
+.event-body b{display:block;font-weight:600;margin:0 0 6px}
+.event-body .muted{text-align:left;margin:0;color:var(--muted);font-size:14px}
+
+/* Footer */
+.footer{background:var(--dark-bg);color:#cbd5e1;padding:52px 0}
+.footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:28px}
+.footer a:hover{color:#fff;text-decoration:underline}
+
+/* ===== Reveal on scroll ===== */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease, transform .6s ease}
+.reveal.show{opacity:1;transform:translateY(0)}
+@keyframes revealUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+
+/* ===== Адаптив ===== */
+@media (max-width: 1100px){
+  .events-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width: 920px){
+  /* вкл. бургер */
+  .burger{display:block}
+  /* мобильное меню: выпадает вниз под хедером */
+  .nav{
+    position:absolute;left:0;right:0;top:100%;
+    background:rgba(255,255,255,.98);
+    border-bottom:1px solid #e5e7eb;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+    display:grid;gap:2px;padding:0;
+    max-height:0;overflow:hidden;transition:max-height .3s ease, padding .3s ease;
+  }
+  .nav a{padding:14px 18px;border-radius:0}
+  .nav.nav--open{max-height:420px;padding:10px 0}
+  /* убираем десктоп флекс */
+  .header-inner{position:relative}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .welcome-inner{flex-direction:column;text-align:center}
+}
+@media (max-width: 640px){
+  .hero{min-height:520px}
+  .events-grid,.cards{grid-template-columns:1fr}
+}
