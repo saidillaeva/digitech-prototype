@@ -3,16 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DERECKA – Prototype</title>
+  <title>About – DigiTech Project</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/about.css">
 </head>
 <body>
+
+<!-- ========== HEADER ========== -->
 <header class="header">
   <div class="container header-inner">
-    <div class="logo">DERECKA</div>
-    <nav class="nav">
+    <a class="logo" href="index.html">Digi<span>Tech</span></a>
+
+    <button class="burger" id="burger"><span></span><span></span><span></span></button>
+
+    <nav class="nav" id="site-nav">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="about.html" class="active">About</a>
       <a href="consortium.html">Consortium</a>
       <a href="events.html">Events</a>
       <a href="publications.html">Publications</a>
@@ -21,21 +27,102 @@
   </div>
 </header>
 
-<section class="section">
-  <div class="container">
-    <h2>About the Project</h2>
-    <p class="muted">Overview, aims, target groups, funding.</p>
-    <p>This project aims to strengthen doctoral education and research capacity across Kyrgyzstan through modernization of curricula, capacity building, and international collaboration.</p>
+<!-- ========== HERO ========== -->
+<section class="about-hero">
+  <div class="hero-bg-animation"></div>
+
+  <div class="hero-content">
+    <h1>About DigiTech</h1>
+    <p>Transforming education and research through digital innovation and global partnerships.</p>
   </div>
 </section>
 
+<!-- ========== MISSION ========== -->
+<section class="mission reveal">
+  <div class="container">
+    <h2 class="section-title"><span>Our Mission</span></h2>
+    <p>
+      To modernize Kyrgyz higher education by integrating digital technologies, fostering open-science culture
+      and strengthening collaboration between EU universities and Central Asia.
+    </p>
+  </div>
+</section>
+
+<!-- ========== STATS WITH COUNTER ========== -->
+<section class="stats reveal">
+  <div class="container">
+    <h2 class="section-title"><span>DigiTech in Numbers</span></h2>
+    <div class="stats-grid">
+      <div class="stat">
+        <span class="number" data-target="12">0</span>
+        <p>Partner Universities</p>
+      </div>
+      <div class="stat">
+        <span class="number" data-target="4">0</span>
+        <p>Digital Laboratories</p>
+      </div>
+      <div class="stat">
+        <span class="number" data-target="120">0</span>
+        <p>PhD Students Trained</p>
+      </div>
+      <div class="stat">
+        <span class="number" data-target="15">0</span>
+        <p>International Events</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TIMELINE ========== -->
+<section class="timeline reveal">
+  <div class="container">
+    <h2 class="section-title"><span>Project Journey</span></h2>
+    <div class="timeline-wrapper">
+      <div class="tl-item">
+        <span class="tl-year">2023</span>
+        <p>Project proposal submitted to Erasmus+.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2024</span>
+        <p>Kick-off meeting hosted in Bishkek, roadmap approved.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">2025</span>
+        <p>Opening of digital PhD labs, student mobilities and research schools.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== VALUES ========== -->
+<section class="values reveal">
+  <div class="container">
+    <h2 class="section-title"><span>Why DigiTech Matters</span></h2>
+    <div class="values-grid">
+      <div class="value-box">💡 Innovation<br><span>Digital tools, AI, e-learning platforms</span></div>
+      <div class="value-box">📚 Open Science<br><span>Research ethics & publication support</span></div>
+      <div class="value-box">🤝 EU Partnerships<br><span>Joint programs with European universities</span></div>
+      <div class="value-box">🚀 Future Skills<br><span>Training next-generation researchers</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
 <footer class="footer">
   <div class="container">
-    <div>© 2025 DERECKA | Erasmus+ Programme of the European Union</div>
-    <div class="muted">Prototype for internal review</div>
+    <div><strong>DigiTech</strong><br>© 2025 DigiTech. All rights reserved.</div>
+    <div><strong>Navigation</strong><br>
+      <a href="index.html">Home</a><br>
+      <a href="about.html">About</a><br>
+      <a href="events.html">Events</a>
+    </div>
+    <div><strong>Contact</strong><br>info@digitech.kg<br>Bishkek, Kyrgyzstan</div>
   </div>
 </footer>
+
 <script src="assets/js/script.js"></script>
+<script src="assets/js/counter.js"></script>
+<script src="assets/js/scroll-reveal.js"></script>
+
 </body>
 </html>
-

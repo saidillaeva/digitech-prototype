@@ -1,0 +1,237 @@
+/* ============ ABOUT PAGE (уникальный дизайн) ============ */
+
+:root {
+  --blue: #0ea5e9;
+  --purple: #7c3aed;
+  --dark: #0f172a;
+  --muted: #64748b;
+  --section-bg: #f8fafc;
+}
+
+/* ---------- HERO ---------- */
+/* -------- УНИКАЛЬНЫЙ HERO для ABOUT -------- */
+.about-hero{
+  position: relative;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* 🔵 Анимированный фон — плавная сетка */
+.hero-bg-animation{
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 30%, #4f46e5, transparent 70%),
+              radial-gradient(circle at 80% 70%, #0ea5e9, transparent 70%),
+              #0b0f1a;
+  filter: blur(80px);
+  animation: moveGradient 8s infinite alternate ease-in-out;
+}
+
+/* 🎭 Красивая стеклянная карточка с текстом */
+.hero-content{
+  position: relative;
+  z-index: 2;
+  padding: 30px 40px;
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  animation: fadeUp 1s ease-in-out;
+}
+
+.about-hero h1{
+  font-size: clamp(32px, 4vw, 54px);
+  margin: 0 0 12px;
+}
+
+.about-hero p{
+  font-size: clamp(16px, 1.3vw, 20px);
+  color: #e2e8f0;
+}
+
+/* 🔄 Анимация плавного движения фона */
+@keyframes moveGradient {
+  from { transform: scale(1) translate(0, 0); }
+  to   { transform: scale(1.2) translate(30px, -30px); }
+}
+
+
+/* ---------- MISSION ---------- */
+.mission {
+  text-align: center;
+  padding: 70px 20px;
+  background: white;
+}
+
+.mission h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.mission p {
+  max-width: 800px;
+  margin: auto;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ---------- STATS + Анимация цифр ---------- */
+.stats {
+  padding: 70px 0;
+  background: var(--section-bg);
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.stat {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-8px);
+}
+
+.stat .number {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--blue);
+  display: block;
+}
+
+.stat p {
+  color: var(--dark);
+  margin-top: 6px;
+}
+
+/* ---------- TIMELINE ---------- */
+.timeline {
+  padding: 70px 0;
+  text-align: center;
+}
+
+.timeline-wrapper {
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+}
+
+.timeline-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: linear-gradient(var(--blue), var(--purple));
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+
+.tl-item {
+  background: white;
+  padding: 20px;
+  width: 45%;
+  border-radius: 12px;
+  position: relative;
+  margin: 20px 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  animation: fade-up 0.8s ease;
+}
+
+.tl-item:nth-child(odd) {
+  left: 0;
+}
+
+.tl-item:nth-child(even) {
+  left: 55%;
+}
+
+.tl-year {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+/* ---------- VALUES (уникальный блок) ---------- */
+.values {
+  padding: 70px 0;
+  background: var(--section-bg);
+  text-align: center;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.value-box {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.value-box span {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.value-box:hover {
+  transform: translateY(-8px);
+}
+
+/* ---------- АНИМАЦИИ ---------- */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-down {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes expand {
+  from { width: 0; }
+  to { width: 120px; }
+}
+
+/* ---------- MOBILE ---------- */
+@media(max-width: 900px) {
+  .stats-grid, .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tl-item {
+    width: 100%;
+    left: 0 !important;
+  }
+}
+
+@media(max-width: 600px) {
+  .stats-grid, .values-grid {
+    grid-template-columns: 1fr;
+  }
+}

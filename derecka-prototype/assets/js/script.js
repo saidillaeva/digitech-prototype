@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 // Prototype loaded
 console.log('Prototype loaded');
 
 // === Burger Menu Toggle ===
+=======
+// Burger toggle
+>>>>>>> f57278c (about)
 const burger = document.getElementById('burger');
 const nav = document.getElementById('site-nav');
 
@@ -46,3 +50,49 @@ window.addEventListener('scroll', () => {
     ? '0 6px 16px rgba(0,0,0,.08)'
     : '0 4px 12px rgba(0,0,0,.05)';
 });
+<<<<<<< HEAD
+=======
+
+/* ====== ABOUT: reveal on scroll ====== */
+(() => {
+  const items = document.querySelectorAll('.reveal, .tl-item');
+  if (!items.length) return;
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('show');
+        io.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+
+  items.forEach(el => io.observe(el));
+})();
+
+/* ====== ABOUT: light parallax for hero ====== */
+(() => {
+  const hero = document.querySelector('.about-hero');
+  if (!hero) return;
+
+  const onScroll = () => {
+    const rect = hero.getBoundingClientRect();
+    // чем ближе к центру viewport, тем активнее параллакс
+    const k = Math.min(1, Math.max(0, 1 - Math.abs(rect.top) / (window.innerHeight*1.2)));
+    hero.style.setProperty('--p', k.toFixed(3));
+    // подвигаем бэкграунд (через transform в ::before)
+    hero.style.setProperty('--scale', (1.08 + (1-k)*0.05).toFixed(3));
+    hero.querySelector(':scope').style;
+  };
+
+  // через CSS var — плавнее на мобильных
+  const styleTag = document.createElement('style');
+  styleTag.textContent = `
+    .about-hero::before{ transform: scale(var(--scale,1.08)); }
+  `;
+  document.head.appendChild(styleTag);
+
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+})();
+>>>>>>> f57278c (about)
