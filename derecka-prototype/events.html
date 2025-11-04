@@ -3,61 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DERECKA – Prototype</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Meetings & Events – DERECKA</title>
+  <link rel="stylesheet" href="assets/css/events.css">
 </head>
 <body>
+
+<!-- HEADER -->
 <header class="header">
   <div class="container header-inner">
-    <div class="logo">DERECKA</div>
-    <nav class="nav">
+    <a class="logo" href="index.html">Digi<span>Tech</span></a>
+
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="site-nav">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="about.html">About the project</a>
       <a href="consortium.html">Consortium</a>
-      <a href="events.html">Events</a>
+      <a href="events.html" class="active">Events</a>
       <a href="publications.html">Publications</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<section class="section">
+<!-- HERO SECTION with image -->
+<section class="hero hero-events">
+  <h1>Meetings and events</h1>
+</section>
+
+<!-- EVENTS SECTION -->
+<section class="events-list">
   <div class="container">
-    <h2>Events</h2>
-    <p class="muted">Upcoming and past events.</p>
     <div class="events-grid">
+
       <div class="event-card">
         <img src="assets/img/event1.jpg" alt="">
         <div class="event-body">
-          <b>Kickoff Meeting</b>
-          <div class="muted">Jan 2025 — Bishkek</div>
+          <b>Development of PhD studies and research</b>
+          <p>November 2023 — Bishkek, Kyrgyzstan</p>
+          <a href="event-detail.html" class="read-btn">Read more…</a>
         </div>
       </div>
+
       <div class="event-card">
         <img src="assets/img/event2.jpg" alt="">
         <div class="event-body">
-          <b>Research Workshop</b>
-          <div class="muted">Mar 2025 — Osh</div>
+          <b>DERECKA Continued Summer School at Brunel</b>
+          <p>June 2023 — London, England</p>
+          <a href="event-detail.html" class="read-btn">Read more…</a>
         </div>
       </div>
+
       <div class="event-card">
         <img src="assets/img/event3.jpg" alt="">
         <div class="event-body">
-          <b>Webinar #1</b>
-          <div class="muted">Online</div>
+          <b>Yerevan Conference: Doctoral Studies in Public Health</b>
+          <p>September 2023 — Yerevan, Armenia</p>
+          <a href="event-detail.html" class="read-btn">Read more…</a>
         </div>
       </div>
+
+    </div>
+
+    <!-- MORE ARTICLES -->
+    <h2 class="more-title">More Articles ...</h2>
+    <div class="more-links">
+      <a href="#">6 Week Internship at Osh State University</a>
+      <a href="#">New Year 2022 Meetings</a>
+      <a href="#">DERECKA presentation at Kyrgyz National Agrarian University</a>
+      <a href="#">PhD admissions at MFA KR (KY)</a>
+    </div>
+
+    <!-- PAGINATION -->
+    <div class="pagination">
+      <a class="active">1</a>
+      <a>2</a>
+      <a>3</a>
+      <a>›</a>
+      <a>»</a>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="container">
-    <div>© 2025 DERECKA | Erasmus+ Programme of the European Union</div>
-    <div class="muted">Prototype for internal review</div>
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <strong>DERECKA Project</strong><br>
+      © 2025 | Erasmus+ Programme<br>
+      All rights reserved.
+    </div>
+
+    <div class="footer-col">
+      <strong>Navigation</strong><br>
+      <a href="index.html">Home</a><br>
+      <a href="about.html">About</a><br>
+      <a href="events.html">Events</a><br>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Contact</strong><br>
+      info@derecka.org<br>
+      Bishkek, Kyrgyzstan
+    </div>
   </div>
 </footer>
-<script src="assets/js/script.js"></script>
+
+<script src="assets/js/events.js"></script>
 </body>
 </html>
-
