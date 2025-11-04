@@ -6,6 +6,10 @@
   <title>About – DigiTech Project</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/about.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 </head>
 <body>
 
@@ -28,9 +32,10 @@
 </header>
 
 <!-- ========== HERO ========== -->
+<!-- ========== HERO ABOUT ========== -->
 <section class="about-hero">
-  <div class="hero-bg-animation"></div>
-
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>About DigiTech</h1>
     <p>Transforming education and research through digital innovation and global partnerships.</p>
@@ -38,15 +43,29 @@
 </section>
 
 <!-- ========== MISSION ========== -->
-<section class="mission reveal">
+<section class="mission">
   <div class="container">
-    <h2 class="section-title"><span>Our Mission</span></h2>
-    <p>
-      To modernize Kyrgyz higher education by integrating digital technologies, fostering open-science culture
-      and strengthening collaboration between EU universities and Central Asia.
-    </p>
+    <div class="mission-inner">
+      <!-- Текстовый блок -->
+      <div class="mission-text">
+        <h2>Our Mission</h2>
+        <p>
+          We are dedicated to transforming businesses through innovative digital solutions. 
+          Our team combines creativity, technology, and strategic thinking to deliver 
+          exceptional results that drive growth and success. We believe in building 
+          lasting partnerships and creating value that extends beyond traditional boundaries.
+        </p>
+      </div>
+      <div class="mission-image">
+        <div class="image-wrapper">
+          <img src="assets/img/mission.webp" alt="Team collaboration">
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
+
 
 <!-- ========== STATS WITH COUNTER ========== -->
 <section class="stats reveal">
@@ -99,30 +118,120 @@
   <div class="container">
     <h2 class="section-title"><span>Why DigiTech Matters</span></h2>
     <div class="values-grid">
-      <div class="value-box">💡 Innovation<br><span>Digital tools, AI, e-learning platforms</span></div>
-      <div class="value-box">📚 Open Science<br><span>Research ethics & publication support</span></div>
-      <div class="value-box">🤝 EU Partnerships<br><span>Joint programs with European universities</span></div>
-      <div class="value-box">🚀 Future Skills<br><span>Training next-generation researchers</span></div>
+      <div class="value-box">
+        <span class="emoji">💡</span>
+        <span class="title">Innovation</span>
+        <span>Digital tools, AI, e-learning platforms</span>
+      </div>
+      <div class="value-box">
+        <span class="emoji">📚</span>
+        <span class="title">Open Science</span>
+        <span>Research ethics & publication support</span>
+      </div>
+      <div class="value-box">
+        <span class="emoji">🤝</span>
+        <span class="title">EU Partnerships</span>
+        <span>Joint programs with European universities</span>
+      </div>
+      <div class="value-box">
+        <span class="emoji">🚀</span>
+        <span class="title">Future Skills</span>
+        <span>Training next-generation researchers</span>
+      </div>
     </div>
   </div>
 </section>
 
+
 <!-- ========== FOOTER ========== -->
 <footer class="footer">
   <div class="container">
-    <div><strong>DigiTech</strong><br>© 2025 DigiTech. All rights reserved.</div>
-    <div><strong>Navigation</strong><br>
-      <a href="index.html">Home</a><br>
-      <a href="about.html">About</a><br>
-      <a href="events.html">Events</a>
+    <div class="footer-brand">
+      <h3>Digi<span>Tech</span></h3>
+      <p class="tagline">Innovating the Digital Future</p>
+      <p>© 2025 DigiTech. All rights reserved.<br>
+      Created under Erasmus+ Programme.</p>
+
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
-    <div><strong>Contact</strong><br>info@digitech.kg<br>Bishkek, Kyrgyzstan</div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <ul>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:info@digitech.kg">info@digitech.kg</a></li>
+        <li><i class="fas fa-phone"></i> +996 (555) 000-000</li>
+        <li><i class="fas fa-map-marker-alt"></i> Bishkek, Kyrgyzstan</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Made with 💙 by DigiTech Team</p>
   </div>
 </footer>
 
 <script src="assets/js/script.js"></script>
 <script src="assets/js/counter.js"></script>
 <script src="assets/js/scroll-reveal.js"></script>
+
+<script>
+  // Counter animation for stats
+  function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-target'));
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        element.textContent = target;
+        clearInterval(timer);
+      } else {
+        element.textContent = Math.floor(current);
+      }
+    }, 16);
+  }
+
+  // Intersection Observer for reveal animations
+  const observerOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        
+        // Trigger counter animation for stats
+        if (entry.target.classList.contains('stats')) {
+          const numbers = entry.target.querySelectorAll('.number');
+          numbers.forEach(num => animateCounter(num));
+        }
+      }
+    });
+  }, observerOptions);
+
+  // Observe all reveal sections
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>

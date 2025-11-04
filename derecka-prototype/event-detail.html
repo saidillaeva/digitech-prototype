@@ -5,17 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Event Details – DigiTech Project</title>
   <link rel="stylesheet" href="assets/css/events.css">
+  <link rel="stylesheet" href="assets/css/event-detail.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
 
 <header class="header">
   <div class="container header-inner">
-    <a class="logo" href="index.html">Digi<span>Tech</span></a>
-    <nav class="nav">
+    <a href="index.html" class="logo">Digi<span>Tech</span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="site-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About the project</a>
       <a href="webinars.html">Webinars</a>
-      <a href="events.html" class="active">Events</a>
+      <a href="events.html">Events</a>
       <a href="publications.html">Publications</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -67,24 +74,43 @@
 </section>
 
 <footer class="footer">
-  <div class="container footer-inner">
-    <div class="footer-col">
-      <strong>DigiTech Project</strong><br>
-      © 2025 | Erasmus+ Programme<br>
-      All rights reserved.
+  <div class="container">
+    <div class="footer-brand">
+      <h3>Digi<span>Tech</span></h3>
+      <p class="tagline">Innovating the Digital Future</p>
+      <p>© 2025 DigiTech. All rights reserved.<br>
+      Created under Erasmus+ Programme.</p>
+
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
-    <div class="footer-col">
-      <strong>Navigation</strong><br>
-      <a href="index.html">Home</a><br>
-      <a href="about.html">About</a><br>
-      <a href="events.html">Events</a><br>
-      <a href="contact.html">Contact</a>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
     </div>
-    <div class="footer-col">
-      <strong>Contact</strong><br>
-      info@digitech.org<br>
-      Bishkek, Kyrgyzstan
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <ul>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:info@digitech.kg">info@digitech.kg</a></li>
+        <li><i class="fas fa-phone"></i> +996 (555) 000-000</li>
+        <li><i class="fas fa-map-marker-alt"></i> Bishkek, Kyrgyzstan</li>
+      </ul>
     </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Made with 💙 by DigiTech Team</p>
   </div>
 </footer>
 

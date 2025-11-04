@@ -6,6 +6,10 @@
   <title>DigiTech – Webinars</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/webinars.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 </head>
 <body>
 
@@ -32,9 +36,10 @@
   <h1>Webinars</h1>
 </section>
 
-<!-- CONTENT -->
-<section class="section webinars-section">
+<section class="webinars-section">
   <div class="container">
+
+    <h1 class="page-title">Educational Webinars & Workshops</h1>
 
     <p class="intro-text">
       Based on the preferences and recommendations from the consortium members,
@@ -43,62 +48,145 @@
     </p>
 
     <p class="muted italic">
-      A password is required to access the videos.  
-      To request the password, please <a href="contact.html">contact us</a> and 
-      provide a short information about your institution or interest in the material.
+      A password is required to access the videos. To request the password, please 
+      <a href="contact.html">contact us</a> and provide a short information about 
+      your institution or interest in the material.
     </p>
 
     <hr class="divider">
 
-    <p class="password-label"><strong>Please enter the password to see the content</strong></p>
+    <p class="password-label">🔒 Please enter the password to see the content</p>
 
     <!-- Password Form -->
     <div class="password-box">
-      <input type="password" id="webinar-password" placeholder="Enter password">
-      <button id="submit-password" class="btn">Submit</button>
-      <p id="error-text" class="error-text"></p>
+      <div class="input-wrapper">
+        <input type="password" id="webinar-password" placeholder="Enter password">
+      </div>
+      <button id="submit-password" class="btn">
+        <span>Unlock Content</span>
+      </button>
+      <p id="error-text" class="error-text hidden"></p>
     </div>
 
-    <!-- Hidden content -->
+    <!-- Hidden Content -->
     <div id="webinar-content" class="hidden">
+      <div class="success-message">
+        ✅ Access granted! Explore our educational resources below.
+      </div>
+
       <h3>Available Webinars</h3>
-      <ul>
-        <li>📌 PhD Training & Research Methodologies</li>
-        <li>📌 Digital Tools for Scientific Work</li>
-        <li>📌 Academic Writing & Publications</li>
-      </ul>
+      
+      <div class="webinar-list">
+        <div class="webinar-item">
+          <span class="webinar-icon">🎓</span>
+          <span class="webinar-text">PhD Training & Research Methodologies</span>
+        </div>
+        
+        <div class="webinar-item">
+          <span class="webinar-icon">💻</span>
+          <span class="webinar-text">Digital Tools for Scientific Work</span>
+        </div>
+        
+        <div class="webinar-item">
+          <span class="webinar-icon">📝</span>
+          <span class="webinar-text">Academic Writing & Publications</span>
+        </div>
+
+        <div class="webinar-item">
+          <span class="webinar-icon">📊</span>
+          <span class="webinar-text">Data Analysis & Visualization Techniques</span>
+        </div>
+
+        <div class="webinar-item">
+          <span class="webinar-icon">🌐</span>
+          <span class="webinar-text">Building Your Academic Online Presence</span>
+        </div>
+      </div>
     </div>
 
   </div>
 </section>
 
 
+
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="container footer-inner">
-    <div class="footer-col">
-      <strong>DERECKA Project</strong><br>
-      © 2025 | Erasmus+ Programme<br>
-      All rights reserved.
+  <div class="container">
+    <div class="footer-brand">
+      <h3>Digi<span>Tech</span></h3>
+      <p class="tagline">Innovating the Digital Future</p>
+      <p>© 2025 DigiTech. All rights reserved.<br>
+      Created under Erasmus+ Programme.</p>
+
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
 
-    <div class="footer-col">
-      <strong>Navigation</strong><br>
-      <a href="index.html">Home</a><br>
-      <a href="about.html">About</a><br>
-      <a href="events.html">Events</a><br>
-      <a href="contact.html">Contact</a>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
     </div>
 
-    <div class="footer-col">
-      <strong>Contact</strong><br>
-      info@derecka.org<br>
-      Bishkek, Kyrgyzstan
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <ul>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:info@digitech.kg">info@digitech.kg</a></li>
+        <li><i class="fas fa-phone"></i> +996 (555) 000-000</li>
+        <li><i class="fas fa-map-marker-alt"></i> Bishkek, Kyrgyzstan</li>
+      </ul>
     </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Made with 💙 by DigiTech Team</p>
   </div>
 </footer>
 
 <script src="assets/js/script.js"></script>
 <script src="assets/js/webinars.js"></script>
+
+
+<script>
+  const passwordInput = document.getElementById('webinar-password');
+  const submitBtn = document.getElementById('submit-password');
+  const errorText = document.getElementById('error-text');
+  const webinarContent = document.getElementById('webinar-content');
+  const correctPassword = 'demo2024'; // Change this to your actual password
+
+  submitBtn.addEventListener('click', function() {
+    const enteredPassword = passwordInput.value;
+
+    if (enteredPassword === correctPassword) {
+      // Success
+      webinarContent.classList.remove('hidden');
+      errorText.classList.add('hidden');
+      document.querySelector('.password-box').style.display = 'none';
+      document.querySelector('.password-label').style.display = 'none';
+    } else {
+      // Error
+      errorText.textContent = '❌ Incorrect password. Please try again or contact us for access.';
+      errorText.classList.remove('hidden');
+      passwordInput.value = '';
+      passwordInput.focus();
+    }
+  });
+
+  // Allow Enter key to submit
+  passwordInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      submitBtn.click();
+    }
+  });
+</script>
+
 </body>
 </html>
