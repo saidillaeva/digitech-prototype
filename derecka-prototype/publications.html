@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DERECKA – Prototype</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DigiTech – Publications</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/publications.css" />
 </head>
 <body>
+
+<!-- ===== HEADER ===== -->
 <header class="header">
   <div class="container header-inner">
-    <div class="logo">DERECKA</div>
-    <nav class="nav">
+    <a href="index.html" class="logo">Digi<span>Tech</span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="site-nav">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="about.html">About the project</a>
       <a href="webinars.html">Webinars</a>
       <a href="events.html">Events</a>
       <a href="publications.html">Publications</a>
@@ -21,25 +27,83 @@
   </div>
 </header>
 
-<section class="section">
+<!-- ===== BEAUTIFUL HEADER (без фото) ===== -->
+<section class="pub-hero no-bg">
   <div class="container">
-    <h2>Publications</h2>
-    <p class="muted">Reports, papers, outputs.</p>
-    <ul>
-      <li>Report 1 — <span class="muted">PDF</span></li>
-      <li>Policy brief — <span class="muted">PDF</span></li>
-      <li>Workshop proceedings — <span class="muted">PDF</span></li>
-    </ul>
+    <h1>Publications</h1>
+    <p>Reports, books, scientific articles & project outputs</p>
   </div>
 </section>
 
+<!-- ===== PUBLICATIONS ===== -->
+<section class="publications">
+  <div class="container">
+    <div class="pub-grid">
+
+      <div class="pub-card">
+        <span class="type">📘 Book</span>
+        <h3>Digital Education in Central Asia</h3>
+        <p class="authors">Edited by: A. Toktomamatov, J. Weber</p>
+        <p class="desc">A comprehensive book exploring digital transformation of universities in Kyrgyzstan.</p>
+        <span class="meta">2024 · ISBN 978-123-456-789</span>
+        <a href="#" class="btn">📄 PDF</a>
+      </div>
+
+      <div class="pub-card">
+        <span class="type">📄 Report</span>
+        <h3>Baseline Study on Digital Skills</h3>
+        <p class="authors">DigiTech Consortium</p>
+        <p class="desc">Analysis of teachers’ and students’ digital competencies in partner universities.</p>
+        <span class="meta">2024 · 1.2 MB</span>
+        <a href="#" class="btn">📄 Download</a>
+      </div>
+
+      <div class="pub-card">
+        <span class="type">📑 Policy Brief</span>
+        <h3>Higher Education Reform Guidelines</h3>
+        <p class="authors">European Experts Board</p>
+        <p class="desc">Recommendations for integrating digital tools into university governance.</p>
+        <span class="meta">2023 · Policy Document</span>
+        <a href="#" class="btn">📄 View</a>
+      </div>
+
+      <div class="pub-card">
+        <span class="type">📰 Article</span>
+        <h3>AI & Research Ethics in Universities</h3>
+        <p class="authors">L. Müller, S. Karimova</p>
+        <p class="desc">Published in Journal of Digital Learning. Focus on ethics & AI tools in PhD research.</p>
+        <span class="meta">DOI: 10.2145/jdl.2025.04</span>
+        <a href="#" class="btn">📄 Read Article</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="container">
-    <div>© 2025 DERECKA | Erasmus+ Programme of the European Union</div>
-    <div class="muted">Prototype for internal review</div>
+    <div>
+      <strong>DigiTech</strong><br>
+      © 2025 DigiTech. All rights reserved.<br>
+      Created under Erasmus+ Programme.
+    </div>
+    <div>
+      <strong>Navigation</strong><br>
+      <a href="index.html">Home</a><br>
+      <a href="about.html">About</a><br>
+      <a href="events.html">Events</a><br>
+      <a href="contact.html">Contacts</a>
+    </div>
+    <div>
+      <strong>Contact</strong><br>
+      Email: info@digitech.kg<br>
+      Phone: +996 (555) 000-000<br>
+      Bishkek, Kyrgyzstan
+    </div>
   </div>
 </footer>
+
 <script src="assets/js/script.js"></script>
 </body>
 </html>
-
