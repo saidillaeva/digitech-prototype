@@ -231,7 +231,7 @@ img{max-width:100%;display:block}
       text-align: center;
       font-size: 42px;
       font-weight: 800;
-      background: linear-gradient(135deg, var(--blue-dark), var(--blue), var(--purple));
+      background: #123899;
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -464,10 +464,13 @@ img{max-width:100%;display:block}
 
     /* ===== CARDS ===== */
     .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 35px;
-    }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* всегда 4 карточки в ряд */
+  gap: 25px; /* чуть меньше отступ */
+  justify-items: center;
+  align-items: stretch;
+}
+
 
     .card {
       background: white;
@@ -807,10 +810,10 @@ img{max-width:100%;display:block}
     /* ===== SECTION HEADING ===== */
     .partners h2 {
       font-size: 42px;
-      font-weight: 700;
+      font-weight: 800;
       text-align: center;
       margin-bottom: 12px;
-      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #8b5cf6 100%);
+      background: #0e2f82;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
