@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DigiTech – Webinars</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/webinars.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Digi<span>Tech</span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About the project</a>
+      <a href="webinars.html" class="active">Webinars</a>
+      <a href="events.html">Events</a>
+      <a href="publications.html">Publications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-events">
+  <h1>Webinars</h1>
+</section>
+
+<!-- CONTENT -->
+<section class="section webinars-section">
+  <div class="container">
+
+    <p class="intro-text">
+      Based on the preferences and recommendations from the consortium members,
+      the DigiTech project prepared a series of online meetings, workshops, 
+      lectures and educational webinars presented below.
+    </p>
+
+    <p class="muted italic">
+      A password is required to access the videos.  
+      To request the password, please <a href="contact.html">contact us</a> and 
+      provide a short information about your institution or interest in the material.
+    </p>
+
+    <hr class="divider">
+
+    <p class="password-label"><strong>Please enter the password to see the content</strong></p>
+
+    <!-- Password Form -->
+    <div class="password-box">
+      <input type="password" id="webinar-password" placeholder="Enter password">
+      <button id="submit-password" class="btn">Submit</button>
+      <p id="error-text" class="error-text"></p>
+    </div>
+
+    <!-- Hidden content -->
+    <div id="webinar-content" class="hidden">
+      <h3>Available Webinars</h3>
+      <ul>
+        <li>📌 PhD Training & Research Methodologies</li>
+        <li>📌 Digital Tools for Scientific Work</li>
+        <li>📌 Academic Writing & Publications</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <strong>DERECKA Project</strong><br>
+      © 2025 | Erasmus+ Programme<br>
+      All rights reserved.
+    </div>
+
+    <div class="footer-col">
+      <strong>Navigation</strong><br>
+      <a href="index.html">Home</a><br>
+      <a href="about.html">About</a><br>
+      <a href="events.html">Events</a><br>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <strong>Contact</strong><br>
+      info@derecka.org<br>
+      Bishkek, Kyrgyzstan
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+<script src="assets/js/webinars.js"></script>
+</body>
+</html>

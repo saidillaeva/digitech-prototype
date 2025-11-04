@@ -1,0 +1,129 @@
+/* ===== Hero Image ===== */
+.hero-events {
+  position: relative;
+  height: 340px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero-events::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('../img/hero.png') center/cover no-repeat;
+}
+.hero-events h1 {
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+/* ===== Password Box ===== */
+.password-box {
+  max-width: 400px;
+  margin-top: 20px;
+}
+.password-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+.password-box .btn {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Hidden content */
+.hidden {
+  display: none;
+}
+
+.error-text {
+  margin-top: 5px;
+  color: red;
+  font-size: 14px;
+}
+
+/* Show content after password */
+#webinar-content {
+  margin-top: 30px;
+}
+
+.webinars-section {
+  padding: 60px 0;
+  text-align: left;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.intro-text {
+  font-size: 17px;
+  max-width: 820px;
+  color: #334155;
+  margin-bottom: 12px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.divider {
+  margin: 24px 0;
+  border: none;
+  border-top: 1px solid #e2e8f0;
+}
+
+.password-label {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.password-box {
+  max-width: 360px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.password-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  background: linear-gradient(90deg, #6366f1, #3b82f6);
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.error-text {
+  color: red;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+#webinar-content {
+  margin-top: 30px;
+}
